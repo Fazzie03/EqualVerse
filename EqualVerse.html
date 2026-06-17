@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+	  
+    <meta charset="UTF-8">
+    <title>EqualVerse</title>
+    
+
+  </head>
+    
+<body>
+  <!DOCTYPE html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Memperkasa Kesaksamaan, Menginspirasikan Perubahan Melalui Pembelajaran Interaktif</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#ec4899);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    z-index:1000;
+    backdrop-filter:blur(10px);
+    background:rgba(0,0,0,0.2);
+}
+
+nav h1{
+    font-size:30px;
+    font-weight:700;
+    background:linear-gradient(to right,#60a5fa,#f472b6);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#f9a8d4;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 8%;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#ec4899;
+    border-radius:50%;
+    filter:blur(180px);
+    opacity:0.3;
+    top:-100px;
+    right:-100px;
+    animation:float 6s infinite ease-in-out;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:400px;
+    height:400px;
+    background:#3b82f6;
+    border-radius:50%;
+    filter:blur(180px);
+    opacity:0.3;
+    bottom:-100px;
+    left:-100px;
+    animation:float 8s infinite ease-in-out;
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(20px);}
+    100%{transform:translateY(0px);}
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    animation:fadeIn 2s ease;
+}
+
+.hero h2{
+    font-size:70px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero h2 span{
+    background:linear-gradient(to right,#60a5fa,#f472b6);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+    max-width:850px;
+    margin:auto;
+    line-height:1.8;
+    color:#e5e7eb;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:15px 35px;
+    border-radius:40px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(to right,#3b82f6,#ec4899);
+    transition:0.4s;
+    box-shadow:0 0 20px rgba(255,255,255,0.2);
+}
+
+.btn:hover{
+    transform:scale(1.08);
+}
+
+/* SECTION */
+
+section{
+    padding:100px 8%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.title h2{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.title p{
+    color:#d1d5db;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    padding:35px;
+    border-radius:25px;
+    backdrop-filter:blur(15px);
+    transition:0.4s;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background:rgba(255,255,255,0.12);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#f9a8d4;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact-box{
+    background:rgba(255,255,255,0.08);
+    padding:50px;
+    border-radius:30px;
+    max-width:700px;
+    margin:auto;
+    backdrop-filter:blur(15px);
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:15px;
+    margin:15px 0;
+    border:none;
+    border-radius:15px;
+    outline:none;
+    background:rgba(255,255,255,0.15);
+    color:white;
+}
+
+.contact textarea{
+    height:150px;
+}
+
+.contact button{
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(to right,#3b82f6,#ec4899);
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.contact button:hover{
+    transform:scale(1.05);
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#d1d5db;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .hero h2{
+        font-size:45px;
+    }
+
+    nav ul{
+        display:none;
+    }
+
+}
+
+</style>
+</head>
+
+
+
+<!-- NAVBAR -->
+
+<nav>
+    <h1>EqualVerse</h1>
+
+    <ul>
+        <li><a href="#about">Kandungan Laman Web</a></li>
+        <li><a href="#features">Projek Kami</a></li>
+     
+      <li><a href="#contact">Talian kami</a></li>
+    </ul>
+</nav>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h2>
+    Memperkasa <span><br>Kesaksamaan Gender</span><br>
+    Melalui Pembelajaran Interaktif
+</h2>
+
+<p>
+Selamat datang ke EqualVerse, sebuah platform yang didedikasikan untuk mempromosikan kesaksamaan gender serta meningkatkan kesedaran tentang kepentingan hak, peluang dan layanan yang sama rata kepada semua individu tanpa mengira jantina.
+
+Ketidaksamaan gender masih menjadi isu dalam pelbagai aspek kehidupan seperti pendidikan, pekerjaan, peluang kepimpinan dan interaksi sosial harian. Melalui laman web ini, kami berusaha untuk mendidik, memberi inspirasi dan menggalakkan pelajar serta masyarakat menjadi agen perubahan dalam mewujudkan persekitaran yang lebih adil dan inklusif.
+
+Misi kami adalah untuk meningkatkan kesedaran tentang isu-isu berkaitan gender, mencabar stereotaip yang wujud dalam masyarakat serta membina komuniti yang menghormati dan menghargai setiap individu.
+</p>
+
+<a href="#about" class="btn">Ketahui Lebih Lanjut</a>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="title">
+    <h2>Kandungan Laman Web</h2>
+    <p>Mengenai EqualVerse</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+    <h3>Pengenalan kepada Kesaksamaan Gender</h3>
+    <p>
+    Ketahui maksud kesaksamaan gender, kepentingannya dalam masyarakat, cabaran yang masih dihadapi serta salah faham yang sering berlaku berkaitan isu ini.
+    </p>
+</div>
+
+<div class="card">
+    <h3>Filem Pendek</h3>
+    <p>
+   Tonton filem pendek kami yang memaparkan situasi kehidupan sebenar berkaitan ketidaksamaan gender serta bagaimana kesedaran dan tindakan positif mampu membawa perubahan.
+    </p>
+</div>
+
+<div class="card">
+    <h3>Animasi</h3>
+    <p>
+Video animasi ini menceritakan kisah mengapakah kesaksamaan jantina penting untuk wanita. Mesej video ini disampaikan dengan cara yang halus namun menyeronokkan dan menghiburkan bersama dengan muzik latar. Video animasi ini adalah untuk memastikan anda memahami lebih mendalam tentang topik “EqualVerse”.
+    </p>
+</div>
+	
+<div class="card">
+    <h3>Kuiz Interaktif</h3>
+    <p>
+Uji tahap kefahaman anda melalui kuiz interaktif yang disediakan. Kuiz ini membantu pelajar menilai pengetahuan mereka serta mengukuhkan pemahaman tentang topik yang telah dipelajari.
+    </p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section id="features">
+
+<div class="title">
+    <h2> Tentang Projek Kami  </h2>
+    <p>EqualVerse merupakan sebuah projek inovasi pendidikan yang bertujuan untuk meningkatkan kesedaran mengenai kesaksamaan gender dalam kalangan pelajar dan masyarakat.
+
+Melalui gabungan pelbagai medium pembelajaran seperti filem pendek, animasi dan kuiz interaktif, kami berharap dapat menjadikan proses pembelajaran lebih menarik, mudah difahami dan memberi impak yang positif.
+
+Kami percaya bahawa pendidikan merupakan langkah pertama ke arah mewujudkan masyarakat yang lebih adil, saling menghormati dan bebas daripada diskriminasi.</p>
+</div>
+
+	<div>
+	</div>
+
+	
+	
+	<div class="title">
+	<h3>‧͙*̩̩͙❆ ͙͛ ˚₊⋆  Tujuan   ‧͙*̩̩͙❆ ͙͛ ˚₊⋆  </h3>
+	<p> <p>-Meningkatkan kesedaran tentang isu diskriminasi gender.</p>
+	<p>-Memupuk nilai empati dan saling memahami.</p>
+<p>-Menggalakkan sikap menghormati hak serta peluang yang sama rata.</p></p>
+	
+		</div>
+		
+	<div class="title">
+	<h3>‧͙*̩̩͙❆ ͙͛ ˚₊⋆  Cara Menggunakan   ‧͙*̩̩͙❆ ͙͛ ˚₊⋆  </h3>
+	 <p>-Tonton filem pendek yang disediakan.</p>
+<p>-Kenal pasti mesej utama yang ingin disampaikan.</p>
+    <p>-Fikirkan langkah-langkah yang boleh diambil untuk mengatasi isu yang dipaparkan.</p>
+</div>
+		
+
+
+<div class="card">
+    <h3>Animasi</h3>
+	<br>   <p>Video animasi ini menceritakan kisah mengapakah kesaksamaan jantina penting untuk wanita. Mesej video ini disampaikan dengan cara yang halus namun menyeronokkan dan menghiburkan bersama dengan muzik latar. Video animasi ini adalah untuk memastikan anda memahami lebih mendalam tentang topik “EqualVerse”.</p>
+	
+	<br>
+	<br>
+ 
+	
+	<div>
+	<iframe
+    width="100%"
+    height="250"
+    src="https://www.youtube.com/embed/ID9J5CSniTw?si=0pxVJIvD3tjeglIc?autoplay=1"
+    frameborder="5"
+    allow="autoplay1"
+    allowfullscreen>
+</iframe>
+</div>
+</div>
+
+<div class="card">
+    <h3>Filem Pendek</h3>
+    <p>
+Filem pendek ini mengisahkan tentang perjuangan wanita dalam kehidupan seharian kita. Ia memberi tumpuan kepada apa yang pelajar perempuan lalui di sekolah. Pelajar perempuan sering tidak dihiraukan jadi mereka tidak dapat membuktikan diri mereka. Filem pendek ini mempunyai banyak nilai moral yang boleh dipelajari.</p>
+	
+	<br>
+	<br>
+ 
+	
+	<div>
+	</div>
+	<p>
+	</p>
+	<div>
+	<iframe
+    width="100%"
+    height="250"
+    src="https://www.youtube.com/embed/s26DtFdiyOY?si=Y5JH7zl4Bl2DXMpE?autoplay=1"
+    frameborder="5"
+    allow="autoplay1"
+    allowfullscreen>
+</iframe>
+</div>
+</div>
+
+<div class="card">
+    <h3>Kuiz</h3>
+    <p>Kuiz ini diwujudkan untuk meningkatkan kesedaran pelajar tentang kesaksamaan gender, memandangkan isu ini sering dipandang ringan oleh ramai pihak. </p>
+	<p>Melalui kuiz ini, pelajar dapat mempelajari dan memahami dengan lebih mendalam tentang kepentingan kesaksamaan gender dalam mewujudkan masyarakat yang adil dan saling menghormati</p>
+	
+	<section>
+	<iframe
+loading="lazy"
+src="https://www.canva.com/design/DAHMLXFK6Ck/uFSfJr_ANkIkwKxjTG1_Zw/view?embed"
+width="100%"
+height="150">
+</iframe>
+</section>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+    <div class="title">
+        <h2>Hubungi Kami</h2>
+        <p>Hubungi Kami Untuk Mengetahui Info Lebih Lanjut</p>
+    </div>
+
+    <div class="contact-box">
+
+        <form action="https://formsubmit.co/nurfaziedah03@gmail.com" method="POST">
+
+            <input type="text" name="name" placeholder="Nama Anda" required>
+
+            <input type="email" name="email" placeholder="Emel Anda" required>
+
+            <textarea name="message" placeholder="Tulis mesej anda..." required></textarea>
+
+            <button type="submit">Hantar</button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    © 2026 EqualVerse | SDG 5 Gender Equality Awareness Project
+</footer>
+
+
+
+</body> 
+</html>
